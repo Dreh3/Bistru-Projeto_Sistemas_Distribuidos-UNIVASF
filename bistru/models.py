@@ -115,3 +115,23 @@ class Avaliacao(models.Model):
 
     def __str__(self):
         return f'{self.escalaSatisfacao} - {self.refeicao.TipoRefeicao(self.refeicao.tipo).label} - {self.data} - {self.estudante.nome}'
+
+#modificar admin
+
+# class Avisos(models.Model):
+#     aviso = models.CharField(max_length=500)
+#     data = models.DateTimeField(auto_now_add=False)
+#     responsavel = models.CharField(max_length=30)
+
+# class Unidade(models.Model):
+#     nome = models.CharField(max_length=100)
+#     localizacao = models.CharField(max_length=200)
+#     ativa = models.BooleanField(default=True)
+
+# class InformacoesBasicas(models.Model):
+    # valorP1 = 
+
+# pagamento
+
+
+

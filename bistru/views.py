@@ -25,6 +25,14 @@ def entrar(request):
 
         if user is not None:
             login(request, user)
+
+            ##lembrar-me
+            lembrarme = request.POST.get('lembrar')
+            if lembrarme:
+                request.session.set_expiry(60*60*24*30) #seg x min x horas do dia x dias
+            else:
+                request.session.set_expiry(0)
+                
             return redirect('bistru:rotas_login')
             messages.success(request, 'Login realizado com sucesso')
         else:

@@ -57,6 +57,9 @@ def rotas_login(request):
 
     return redirect('bistru:entrar')
 
+def recuperar(request):
+    return render(request, 'bistru/recuperar.html')
+
 @login_required(login_url='/login/')
 def cardapio(request):
     
@@ -118,3 +121,4 @@ def cardapio(request):
 # @login_required(login_url='/login/')
 # def cardapio(request):
 #     return render(request, 'bistru/cardapio.html', {'user': request.user})
+
